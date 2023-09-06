@@ -69,16 +69,16 @@ def test_google_login(browser):
         password_input = browser.find_element(By.XPATH, "//input[@type='password']")
 
         # 請替換為您的 Google 帳號和密碼
-        email_input.send_keys("a098584674@gmail.com")
+        email_input.send_keys("你的信箱")
         logging.info("輸入google信箱")
 
         email_continue.click()
         time.sleep(5)
-        password_input.send_keys("ivyaaaa748")
+        password_input.send_keys("你的密碼")
         logging.info("輸入google密碼")
         password_input.send_keys(Keys.ENTER)
 
-        success_login = "a098584674@gmail.com"
+        success_login = "你的帳號"
         collapse_title = browser.find_element(By.XPATH, "//div[@id='navbarCollapse']")
         # 斷言是否成功登入，這裡可以根據實際情況進行修改
         assert success_login in collapse_title.text
@@ -106,9 +106,9 @@ def test_microsoft_login(browser):
         keep_login_not_btn = browser.find_element(By.XPATH, "//input[@type='button'][@value='否']")
 
         # 請替換為您的 Microsoft 帳號和密碼
-        email_input.send_keys("0985846704")
+        email_input.send_keys("帳號")
         continue_btn.click()
-        password_input.send_keys("ivyaaaa748")
+        password_input.send_keys("密碼")
         continue_btn.click()
         keep_login_not_btn.click()
 
@@ -138,12 +138,12 @@ def test_apple_id_login(browser):
         password_input = browser.find_element(By.XPATH, "//input[@type='password']")
 
         # 請替換為您的 Apple ID 和密碼
-        apple_id_input.send_keys("ivylove830912@yahoo.com.tw")
+        apple_id_input.send_keys("帳號")
         apple_id_input.send_keys(Keys.ENTER)
         logging.info("輸入Apple ID帳號")
         time.sleep(10)
 
-        password_input.send_keys("I@qwe830912")
+        password_input.send_keys("密碼")
         password_input.send_keys(Keys.ENTER)
         logging.info("點擊 Apple ID 密碼")
         time.sleep(10)
@@ -174,8 +174,8 @@ def test_moe_login(browser):
         password_input = browser.find_element(By.XPATH, "password-input")
 
         # 請替換為有效的電子郵件和密碼
-        email_input.send_keys("your_email@example.com")
-        password_input.send_keys("your_email_password")
+        email_input.send_keys("你的信箱")
+        password_input.send_keys("你的密碼")
         password_input.send_keys(Keys.ENTER)
 
         success_login = "帳號名稱"
